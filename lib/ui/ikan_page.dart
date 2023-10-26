@@ -52,7 +52,7 @@ class _IkanPageState extends State<IkanPage> {
         builder: (context, snapshot) {
           if (snapshot.hasError) print(snapshot.error);
           return snapshot.hasData
-              ? ListProduk(
+              ? ListIkan(
                   list: snapshot.data,
                 )
               : const Center(
@@ -64,9 +64,9 @@ class _IkanPageState extends State<IkanPage> {
   }
 }
 
-class ListProduk extends StatelessWidget {
+class ListIkan extends StatelessWidget {
   final List? list;
-  const ListProduk({Key? key, this.list}) : super(key: key);
+  const ListIkan({Key? key, this.list}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
